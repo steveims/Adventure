@@ -1,0 +1,207 @@
+{
+    "start" : "L6",
+    "description" : "In search of the missing meal.",
+    "location_definitions" : {
+        "L1" : {
+            "description" : "You're in a wooded location.  Trails lead south and east around the large tree.",
+            "look" : {
+                "large tree" : "You see a hollow in in the trunk.",
+                "hollow" : "#key" 
+            },
+            "go" : {
+                "s" : "@L2",
+                "e" : "@L5" 
+            } 
+        },
+        "L2" : {
+            "description" : "You're in a wooded location.  Trails lead north, south and east.",
+            "go" : {
+                "n" : "@L1",
+                "e" : "@L6",
+                "s" : "@L3" 
+            } 
+        },
+        "L3" : {
+            "description" : "You're in a wooded location.  Trails lead north, south and east.",
+            "go" : {
+                "n" : "@L2",
+                "e" : "@L7",
+                "s" : "@L4" 
+            } 
+        },
+        "L4" : {
+            "description" : "You're at the edge of a river with no way to cross.  A trail leads north into the woods.",
+            "go" : {
+                "n" : "@L3" 
+            } 
+        },
+        "L5" : {
+            "description" : "You're in a wooded location.  Trails lead east, west, and south.",
+            "go" : {
+                "w" : "@L1",
+                "e" : "@L8",
+                "s" : "@L6" 
+            } 
+        },
+        "L6" : {
+            "description" : "You're in a wooded location.  Trails lead in all directions.",
+            "go" : {
+                "w" : "@L2",
+                "n" : "@L5",
+                "e" : "@L9",
+                "s" : "@L7" 
+            } 
+        },
+        "L7" : {
+            "description" : "You're at the edge of a river with no way to cross.  A trail leads north into the woods.",
+            "go" : {
+                "n" : "@L6" 
+            } 
+        },
+        "L8" : {
+            "description" : "You're in a clearing on the west side of a log cabin.  The front door looks locked.  Trails lead off to the west and south.",
+            "use" : {
+                "#key" : "^L8.open" 
+            },
+            "go" : {
+                "w" : "@L5",
+                "s" : "@L9" 
+            } 
+        },
+        "L8.open" : {
+            "description" : "You're in a clearing on the west side of a log cabin.  The front door is wide open.  Trails lead off to the west and south.",
+            "use" : {
+                "#key" : "^L8"
+            },
+            "go" : {
+                "w" : "@L5",
+                "e" : "@L11",
+                "s" : "@L9" 
+            } 
+        },
+        "L9" : {
+            "description" : "You're in a wooded location.  Trails lead in all directions.",
+            "go" : {
+                "w" : "@L6",
+                "n" : "@L8",
+                "e" : "@L13",
+                "s" : "@L10" 
+            } 
+        },
+        "L10" : {
+            "description" : "You're at the edge of a river with no way to cross.  A trail leads north into the woods.",
+            "go" : {
+                "n" : "@L9" 
+            } 
+        },
+        "L11" : {
+            "description" : "You're standing inside the main room of the cabin.  It's too dark to see what's here.  You thought you felt a string touch your face.",
+            "use" : {
+                "string" : ["Ah, much better.  An overhead light just turned on and you can see around the room now.", "^L11.light"]
+            },
+            "go" : {
+                "w" : "@L8" 
+            } 
+        },
+        "L11.light" : {
+            "description" : "You're standing inside the main room of the cabin.  You can see a kitchen opposite from the open door.",
+            "use" : {
+                "string" : ["Lights off.", "^L11"]
+            },
+            "go" : {
+                "e" : "@L12",
+                "w" : "@L8" 
+            } 
+        },
+        "L12" : {
+            "description" : "Looks like a pretty typical kitchen.  Probably no food in the cupboard.  There's a rope lying on the table.",
+            "look" : {
+                "table" : "#rope",
+                "cupboard" : "#flashlight" 
+            },
+            "go" : {
+                "w" : "@L11.light" 
+            } 
+        },
+        "L13" : {
+            "description" : "You're leaning against a big tree at the edge of a river.  A boat lies on the shore to the south.  A trail leads west into the woods.",
+            "look" : {
+                "big tree" : "#oars" 
+            },
+            "go" : {
+                "w" : "@L9",
+                "s" : "@L14" 
+            } 
+        },
+        "L14" : {
+            "description" : "You're sitting in the boat on the northern shore of the river.  You can see the southern shore across the water.  A path leads north to the big tree.",
+            "use" : {
+                "#oars" : ["You merrily rowed your boat across the stream.", "@L17"]
+            },
+            "go" : {
+                "n" : "@L13" 
+            } 
+        },
+        "L15" : {
+            "description" : "You're sitting in the boat on the southern shore of the river.  A path leads south to the large cave.",
+            "use" : {
+                "#oars" : ["You merrily rowed your boat across the stream.", "@L14"]
+            },
+            "go" : {
+                "s" : "@L17" 
+            } 
+        },
+        "L17" : {
+            "description" : "You're now standing in front of a large cave.  It's too dark inside to enter.  The boat lies to the north.",
+            "use" : {
+                "#flashlight" : "^L17.light" 
+            },
+            "go" : {
+                "n" : "@L15" 
+            } 
+        },
+        "L17.light" : {
+            "description" : "Your flashlight reveals a passageway inside the cave to the south.  The boat lies to the north.",
+            "use" : {
+                "#flashlight" : "^L17" 
+            },
+            "go" : {
+                "n" : "@L15",
+                "s" : "@L18" 
+            } 
+        },
+        "L18" : {
+            "description" : "You've reached the end of the passageway.  Seems that the only way out is back to the north, although you feel a draft coming from behind a large rock.",
+            "look" : {
+                "rock" : "You see a shaft that descends to a lower level.  If you want to go down there, then you'll need something to help you get down safely." 
+            },
+            "use" : {
+                "#rope" : "@L19" 
+            },
+            "go" : {
+                "n" : "@L15" 
+            } 
+        },
+        "L19" : {
+            "description" : "You're in the lower level now.  A passageway leads to the south.  Your rope is hanging from the upper level.",
+            "use" : {
+                "#rope" : "@L18" 
+            },
+            "go" : {
+                "s" : "@L20" 
+            } 
+        },
+        "L20" : {
+            "description" : "You've entered a large cavern, with a table and chair in the center.  A lighted candle makes the table look very inviting.",
+            "look" : {
+                "table" : "You see a piping hot cheeseburger." 
+            },
+            "use" : {
+                "cheeseburger" : "Yum!  You win!" 
+            },
+            "go" : {
+                "n" : "@L19" 
+            } 
+        } 
+    }
+}

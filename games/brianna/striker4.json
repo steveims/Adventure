@@ -1,0 +1,1954 @@
+{
+    "start" : "G101",
+    "description" : "DO NOT PLAY! NOT READY!",
+    "location_definitions" : {
+        "G101" : {
+            "description" : "You are inside Room 101. Doors lead east and south.",
+            "go" : {
+                "e" : "@G102",
+                "s" : "@G110" 
+            } 
+        },
+        "G102" : {
+            "description" : "You are inside Room 102. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@G101",
+                "e" : "@G103",
+                "s" : "@G111" 
+            } 
+        },
+        "G103" : {
+            "description" : "You are inside Room 103. You see something in the corner that appears to be some sort of a box. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@G102",
+                "e" : "@G104",
+                "s" : "@G112" 
+            },
+            "look" : {
+                "box" : "This looks like a trapdoor!",
+                "trapdoor" : "Maybe you should see where it goes." 
+            },
+            "use" : {
+                "trapdoor" : "@O302" 
+            } 
+        },
+        "G104" : {
+            "description" : "You are inside Room 104. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@G103",
+                "e" : "@G105",
+                "s" : "@G113" 
+            } 
+        },
+        "G105" : {
+            "description" : "You are inside Room 105. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@G104",
+                "e" : "@G106",
+                "s" : "@G114" 
+            } 
+        },
+        "G106" : {
+            "description" : "You are inside Room 106. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@G105",
+                "e" : "@G107",
+                "s" : "@G115" 
+            } 
+        },
+        "G107" : {
+            "description" : "You are inside Room 107. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@G106",
+                "e" : "@G108",
+                "s" : "@G116" 
+            } 
+        },
+        "G108" : {
+            "description" : "You are inside Room 108. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@G107",
+                "e" : "@G109",
+                "s" : "@G117" 
+            } 
+        },
+        "G109" : {
+            "description" : "You are inside Room 109. Doors lead west and south.",
+            "go" : {
+                "w" : "@G108",
+                "s" : "@G118" 
+            } 
+        },
+        "G110" : {
+            "description" : "You are inside Room 110. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@G101",
+                "e" : "@G111",
+                "s" : "@G119" 
+            } 
+        },
+        "G111" : {
+            "description" : "You are inside Room 111. Doors lead in all directions.",
+            "go" : {
+                "n" : "@G102",
+                "w" : "@G110",
+                "e" : "@G112",
+                "s" : "@G120" 
+            } 
+        },
+        "G112" : {
+            "description" : "You are inside Room 112. You see something in the corner that appears to be some sort of a box. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@G103",
+                "w" : "@G111",
+                "e" : "@G113" 
+            },
+            "look" : {
+                "box" : "This looks like a trapdoor!",
+                "trapdoor" : "Maybe you should see where it goes." 
+            },
+            "use" : {
+                "trapdoor" : "@P407" 
+            } 
+        },
+        "G113" : {
+            "description" : "You are inside Room 113. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@G104",
+                "w" : "@G112",
+                "e" : "@G114" 
+            } 
+        },
+        "G114" : {
+            "description" : "You are inside Room 114. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@G105",
+                "w" : "@G113",
+                "e" : "@G115" 
+            } 
+        },
+        "G115" : {
+            "description" : "You are inside Room 115. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@G106",
+                "w" : "@G114",
+                "e" : "@G116" 
+            } 
+        },
+        "G116" : {
+            "description" : "You are inside Room 116. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@G107",
+                "w" : "@G115",
+                "e" : "@G117" 
+            } 
+        },
+        "G117" : {
+            "description" : "You are inside Room 117. Doors lead in all directions.",
+            "go" : {
+                "n" : "@G108",
+                "w" : "@G116",
+                "e" : "@G118",
+                "s" : "@G121" 
+            } 
+        },
+        "G118" : {
+            "description" : "You are inside Room 118. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@G109",
+                "w" : "@G117",
+                "s" : "@G122" 
+            } 
+        },
+        "G119" : {
+            "description" : "You are inside Room 119. Doors lead north, east,  and south.",
+            "go" : {
+                "n" : "@G110",
+                "e" : "@G120",
+                "s" : "@G123" 
+            } 
+        },
+        "G120" : {
+            "description" : "You are inside Room 120. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@G111",
+                "w" : "@G119",
+                "s" : "@G124" 
+            } 
+        },
+        "G121" : {
+            "description" : "You are inside Room 121. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@G117",
+                "e" : "@G122",
+                "s" : "@G125" 
+            } 
+        },
+        "G122" : {
+            "description" : "You are inside Room 122. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@G118",
+                "w" : "@G121",
+                "s" : "@G126" 
+            } 
+        },
+        "G123" : {
+            "description" : "You are inside Room 123. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@G119",
+                "e" : "@G124",
+                "s" : "@G127" 
+            } 
+        },
+        "G124" : {
+            "description" : "You are inside Room 124. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@G120",
+                "w" : "@G123",
+                "s" : "@G128" 
+            } 
+        },
+        "G125" : {
+            "description" : "You are inside Room 125. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@G121",
+                "e" : "@G126",
+                "s" : "@G129" 
+            } 
+        },
+        "G126" : {
+            "description" : "You are inside Room 126. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@G122",
+                "w" : "@G125",
+                "s" : "@G130" 
+            } 
+        },
+        "G127" : {
+            "description" : "You are inside Room 127. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@G123",
+                "e" : "@G128",
+                "s" : "@G131" 
+            } 
+        },
+        "G128" : {
+            "description" : "You are inside Room 128. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@G124",
+                "w" : "@G127",
+                "s" : "@G132" 
+            } 
+        },
+        "G129" : {
+            "description" : "You are inside Room 129. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@G125",
+                "e" : "@G130",
+                "s" : "@G133" 
+            } 
+        },
+        "G130" : {
+            "description" : "You are inside Room 130. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@G126",
+                "w" : "@G129",
+                "s" : "@G134" 
+            } 
+        },
+        "G131" : {
+            "description" : "You are inside Room 131. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@G127",
+                "e" : "@G132",
+                "s" : "@G135" 
+            } 
+        },
+        "G132" : {
+            "description" : "You are inside Room 132. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@G128",
+                "w" : "@G131",
+                "s" : "@G136" 
+            } 
+        },
+        "G133" : {
+            "description" : "You are inside Room 133. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@G129",
+                "e" : "@G134",
+                "s" : "@G142" 
+            } 
+        },
+        "G134" : {
+            "description" : "You are inside Room 134. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@G130",
+                "w" : "@G133",
+                "s" : "@G143" 
+            } 
+        },
+        "G135" : {
+            "description" : "You are inside Room 135. You see something in the corner that appears to be some sort of a box. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@G131",
+                "e" : "@G136",
+                "s" : "@G144" 
+            },
+            "look" : {
+               "box" : "This looks like a trapdoor!",
+               "trapdoor" : "Maybe you should see where it goes."
+             },
+            "use" : {
+               "trapdoor" :  "@outside1"
+            }  
+        },
+        "G136" : {
+            "description" : "You are inside Room 136. Doors lead in all directions.",
+            "go" : {
+                "n" : "@G132",
+                "w" : "@G135",
+                "e" : "@G137",
+                "s" : "@G145" 
+            } 
+        },
+        "G137" : {
+            "description" : "You are inside Room 137. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@G136",
+                "e" : "@G138",
+                "s" : "@G146" 
+            } 
+        },
+        "G138" : {
+            "description" : "You are inside Room 138. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@G137",
+                "e" : "@G139",
+                "s" : "@G147" 
+            } 
+        },
+        "G139" : {
+            "description" : "You are inside Room 139. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@G138",
+                "e" : "@G140",
+                "s" : "@G148" 
+            } 
+        },
+        "G140" : {
+            "description" : "You are inside Room 140. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@G139",
+                "e" : "@G141",
+                "s" : "@G149" 
+            } 
+        },
+        "G141" : {
+            "description" : "You are inside Room 141. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@G140",
+                "e" : "@G142",
+                "s" : "@G150" 
+            } 
+        },
+        "G142" : {
+            "description" : "You are inside Room 142. You see something in the corner that appears to be some sort of a box. Doors lead in all directions.",
+            "go" : {
+                "n" : "@G133",
+                "w" : "@G141",
+                "e" : "@G143",
+                "s" : "@G151" 
+            },
+            "look" : {
+                "box" : "This looks like a trapdoor!",
+                "trapdoor" : "Maybe you should see where it goes." 
+            },
+            "use" : {
+                "trapdoor" : "@G153" 
+            } 
+        },
+        "G143" : {
+            "description" : "You are inside Room 143. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@G134",
+                "w" : "@G142",
+                "s" : "@G152" 
+            } 
+        },
+        "G144" : {
+            "description" : "You are inside Room 144. You see something in the corner that appears to be some sort of a box. Doors lead north and east.",
+            "go" : {
+                "n" : "@G135",
+                "e" : "@G145" 
+            },
+            "look" : {
+                "box" : "This looks like a trapdoor!",
+                "trapdoor" : "Maybe you should see where it goes." 
+            },
+            "use" : {
+                "trapdoor" : "@B249" 
+            } 
+        },
+        "G145" : {
+            "description" : "You are inside Room 145. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@G136",
+                "w" : "@G144",
+                "e" : "@G146" 
+            } 
+        },
+        "G146" : {
+            "description" : "You are inside Room 146. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@G137",
+                "w" : "@G145",
+                "e" : "@G147" 
+            } 
+        },
+        "G147" : {
+            "description" : "You are inside Room 147. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@G138",
+                "w" : "@G146",
+                "e" : "@G148" 
+            } 
+        },
+        "G148" : {
+            "description" : "You are inside Room 148. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@G139",
+                "w" : "@G147",
+                "e" : "@G149" 
+            } 
+        },
+        "G149" : {
+            "description" : "You are inside Room 149. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@G140",
+                "w" : "@G148",
+                "e" : "@G150" 
+            } 
+        },
+        "G150" : {
+            "description" : "You are inside Room 150. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@G141",
+                "w" : "@G149",
+                "e" : "@G151" 
+            } 
+        },
+        "G151" : {
+            "description" : "You are inside Room 151. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@G142",
+                "w" : "@G150",
+                "e" : "@G152" 
+            } 
+        },
+        "G152" : {
+            "description" : "You are inside Room 152. Doors lead north and west.",
+            "go" : {
+                "n" : "@G143",
+                "w" : "@G151" 
+            } 
+        },
+        "G153" : {
+            "description" : "You are inside the main lobby on the first floor. In each of the four corners of the room, you see a different plant. You see a tree, a flower pot, a bush, and monkey grass. You also see stairs that lead upstairs.",
+            "go" : {
+                "up" : "@B201" 
+            },
+            "look" : {
+                "tree" : "#green key",
+                "flower pot" : "#flashlight",
+                "bush" : "#water bottle",
+                "monkey grass" : "You see rocks." 
+            } 
+        },
+        "B201" : {
+            "description" : "You are inside Room 201. Doors lead east and south.",
+            "go" : {
+                "e" : "@B202",
+                "s" : "@B210" 
+            } 
+        },
+        "B202" : {
+            "description" : "You are inside Room 202. You see something in the corner that appears to some sort of a box. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@B201",
+                "e" : "@B203",
+                "s" : "@B211" 
+            },
+            "look" : {
+                "box" : "This looks like a trapdoor!",
+                "trapdoor" : "Maybe you should see where it goes." 
+            },
+            "use" : {
+                "trapdoor" : "@P445" 
+            } 
+        },
+        "B203" : {
+            "description" : "You are inside Room 203. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@B202",
+                "e" : "@B204",
+                "s" : "@B212" 
+            } 
+        },
+        "B204" : {
+            "description" : "You are inside Room 204. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@B203",
+                "e" : "@B205",
+                "s" : "@B213" 
+            } 
+        },
+        "B205" : {
+            "description" : "You are inside Room 205. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@B204",
+                "e" : "@B206",
+                "s" : "@B214" 
+            } 
+        },
+        "B206" : {
+            "description" : "You are inside Room 206. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@B205",
+                "e" : "@B207",
+                "s" : "@B215" 
+            } 
+        },
+        "B207" : {
+            "description" : "You are inside Room 207. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@B206",
+                "e" : "@B208",
+                "s" : "@B216" 
+            } 
+        },
+        "B208" : {
+            "description" : "You are inside Room 208. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@B207",
+                "e" : "@B209",
+                "s" : "@B217" 
+            } 
+        },
+        "B209" : {
+            "description" : "You are inside Room 209. You see something in the corner that appears to be some sort of a box. Doors lead west and south.",
+            "go" : {
+                "w" : "@B208",
+                "s" : "@B218" 
+            },
+            "look" : {
+                "box" : "This looks like a trapdoor!",
+                "trapdoor" : "Maybe you should see where it goes." 
+            },
+            "use" : {
+                "trapdoor" : "@G109" 
+            } 
+        },
+        "B210" : {
+            "description" : "You are inside Room 210. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@B201",
+                "e" : "@B211",
+                "s" : "@B219" 
+            } 
+        },
+        "B211" : {
+            "description" : "You are inside Room 211. Doors lead in all directions.",
+            "go" : {
+                "n" : "@B202",
+                "w" : "@B210",
+                "e" : "@B212",
+                "s" : "@B220" 
+            } 
+        },
+        "B212" : {
+            "description" : "You are inside Room 212. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@B203",
+                "w" : "@B211",
+                "e" : "@B213" 
+            } 
+        },
+        "B213" : {
+            "description" : "You are inside Room 213. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@B204",
+                "w" : "@B212",
+                "e" : "@B214" 
+            } 
+        },
+        "B214" : {
+            "description" : "You are inside Room 214. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@B205",
+                "w" : "@B213",
+                "e" : "@B215" 
+            } 
+        },
+        "B215" : {
+            "description" : "You are inside Room 215. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@B206",
+                "w" : "@B214",
+                "e" : "@B216" 
+            } 
+        },
+        "B216" : {
+            "description" : "You are inside Room 216. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@B207",
+                "w" : "@B215",
+                "e" : "@B217" 
+            } 
+        },
+        "B217" : {
+            "description" : "You are inside Room 217. Doors lead in all directions.",
+            "go" : {
+                "n" : "@B208",
+                "w" : "@B216",
+                "e" : "@B218",
+                "s" : "@B221" 
+            } 
+        },
+        "B218" : {
+            "description" : "You are inside Room 218. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@B209",
+                "w" : "@B217",
+                "s" : "@B222" 
+            } 
+        },
+        "B219" : {
+            "description" : "You are inside Room 219. Doors lead north, east,  and south.",
+            "go" : {
+                "n" : "@B210",
+                "e" : "@B220",
+                "s" : "@B223" 
+            } 
+        },
+        "B220" : {
+            "description" : "You are inside Room 220. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@B211",
+                "w" : "@B219",
+                "s" : "@B224" 
+            } 
+        },
+        "B221" : {
+            "description" : "You are inside Room 221. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@B217",
+                "e" : "@B222",
+                "s" : "@B225" 
+            } 
+        },
+        "B222" : {
+            "description" : "You are inside Room 222. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@B218",
+                "w" : "@B221",
+                "s" : "@B226" 
+            } 
+        },
+        "B223" : {
+            "description" : "You are inside Room 223. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@B219",
+                "e" : "@B224",
+                "s" : "@B227" 
+            } 
+        },
+        "B224" : {
+            "description" : "You are inside Room 224. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@B220",
+                "w" : "@B223",
+                "s" : "@B228" 
+            } 
+        },
+        "B225" : {
+            "description" : "You are inside Room 225. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@B221",
+                "e" : "@B226",
+                "s" : "@B229" 
+            } 
+        },
+        "B226" : {
+            "description" : "You are inside Room 226. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@B222",
+                "w" : "@B225",
+                "s" : "@B230" 
+            } 
+        },
+        "B227" : {
+            "description" : "You are inside Room 227. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@B223",
+                "e" : "@B228",
+                "s" : "@B231" 
+            } 
+        },
+        "B228" : {
+            "description" : "You are inside Room 228. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@B224",
+                "w" : "@B227",
+                "s" : "@B232" 
+            } 
+        },
+        "B229" : {
+            "description" : "You are inside Room 229. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@B225",
+                "e" : "@B230",
+                "s" : "@B233" 
+            } 
+        },
+        "B230" : {
+            "description" : "You are inside Room 230. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@B226",
+                "w" : "@B229",
+                "s" : "@B234" 
+            } 
+        },
+        "B231" : {
+            "description" : "You are inside Room 231. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@B227",
+                "e" : "@B232",
+                "s" : "@B235" 
+            } 
+        },
+        "B232" : {
+            "description" : "You are inside Room 232. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@B228",
+                "w" : "@B231",
+                "s" : "@B236" 
+            } 
+        },
+        "B233" : {
+            "description" : "You are inside Room 233. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@B229",
+                "e" : "@B234",
+                "s" : "@B242" 
+            } 
+        },
+        "B234" : {
+            "description" : "You are inside Room 234. You see something in the corner that appears to be some sort of a box. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@B230",
+                "w" : "@B233",
+                "s" : "@B243" 
+            },
+            "look" : {
+                "box" : "This looks like a trapdoor!",
+                "trapdoor" : "Maybe you should see where it goes." 
+            },
+            "use" : {
+                "trapdoor" : "@O352" 
+            } 
+        },
+        "B235" : {
+            "description" : "You are inside Room 235. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@B231",
+                "e" : "@B236",
+                "s" : "@B244" 
+            } 
+        },
+        "B236" : {
+            "description" : "You are inside Room 236. You see something in the corner that appears to be some sort of a box. Doors lead in all directions.",
+            "go" : {
+                "n" : "@B232",
+                "w" : "@B235",
+                "e" : "@B237",
+                "s" : "@B245" 
+            },
+            "look" : {
+                "box" : "This looks like a trapdoor!",
+                "trapdoor" : "Maybe you should see where it goes." 
+            },
+            "use" : {
+                "trapdoor" : "@B253" 
+            } 
+        },
+        "B237" : {
+            "description" : "You are inside Room 237. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@B236",
+                "e" : "@B238",
+                "s" : "@B246" 
+            } 
+        },
+        "B238" : {
+            "description" : "You are inside Room 238. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@B237",
+                "e" : "@B239",
+                "s" : "@B247" 
+            } 
+        },
+        "B239" : {
+            "description" : "You are inside Room 239. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@B238",
+                "e" : "@B240",
+                "s" : "@B248" 
+            } 
+        },
+        "B240" : {
+            "description" : "You are inside Room 240. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@B239",
+                "e" : "@B241",
+                "s" : "@B249" 
+            } 
+        },
+        "B241" : {
+            "description" : "You are inside Room 241. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@B240",
+                "e" : "@B242",
+                "s" : "@B250" 
+            } 
+        },
+        "B242" : {
+            "description" : "You are inside Room 242. Doors lead in all directions.",
+            "go" : {
+                "n" : "@B233",
+                "w" : "@B241",
+                "e" : "@B243",
+                "s" : "@B251" 
+            } 
+        },
+        "B243" : {
+            "description" : "You are inside Room 243. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@B234",
+                "w" : "@B242",
+                "s" : "@B252" 
+            } 
+        },
+        "B244" : {
+            "description" : "You are inside Room 244. Doors lead north and east.",
+            "go" : {
+                "n" : "@B235",
+                "e" : "@B245" 
+            } 
+        },
+        "B245" : {
+            "description" : "You are inside Room 245. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@B236",
+                "w" : "@B244",
+                "e" : "@B246" 
+            } 
+        },
+        "B246" : {
+            "description" : "You are inside Room 246. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@B237",
+                "w" : "@B245",
+                "e" : "@B247" 
+            } 
+        },
+        "B247" : {
+            "description" : "You are inside Room 247. You see something in the corner that appears to be some sort of a box. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@B238",
+                "w" : "@B246",
+                "e" : "@B248" 
+            },
+            "look" : {
+               "box" : "This looks like a trapdoor!",
+               "trapdoor" : "Maybe you should see where it goes."
+            },
+            "use" : {
+               "trapdoor" : "@outside1"
+            } 
+        },
+        "B248" : {
+            "description" : "You are inside Room 248. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@B239",
+                "w" : "@B247",
+                "e" : "@B249" 
+            } 
+        },
+        "B249" : {
+            "description" : "You are inside Room 249. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@B240",
+                "w" : "@B248",
+                "e" : "@B250" 
+            } 
+        },
+        "B250" : {
+            "description" : "You are inside Room 250. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@B241",
+                "w" : "@B249",
+                "e" : "@B251" 
+            } 
+        },
+        "B251" : {
+            "description" : "You are inside Room 251. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@B242",
+                "w" : "@B250",
+                "e" : "@B252" 
+            } 
+        },
+        "B252" : {
+            "description" : "You are inside Room 252. Doors lead north and west.",
+            "go" : {
+                "n" : "@B243",
+                "w" : "@B251" 
+            } 
+        },
+        "B253" : {
+            "description" : "You are inside the main lobby on the second floor. In each of the four corners of the room, you see a different plant. You see a tree, a flower pot, a bush, and monkey grass. You also see stairs that lead upstairs and downstairs.",
+            "go" : {
+                "up" : "@O301",
+                "down" : "@G152" 
+            },
+            "look" : {
+                "tree" : "You see a bird's nest.",
+                "flower pot" : "#blue key",
+                "bush" : "You see sticks and rocks.",
+                "monkey grass" : "#energy bar" 
+            } 
+        },
+        "O301" : {
+            "description" : "You are inside Room 301. Doors lead east and south.",
+            "go" : {
+                "e" : "@O302",
+                "s" : "@O310" 
+            } 
+        },
+        "O302" : {
+            "description" : "You are inside Room 302. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@O301",
+                "e" : "@O303",
+                "s" : "@O311" 
+            } 
+        },
+        "O303" : {
+            "description" : "You are inside Room 303. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@O302",
+                "e" : "@O304",
+                "s" : "@O312" 
+            } 
+        },
+        "O304" : {
+            "description" : "You are inside Room 304. You see something in the corner that appears to some sort of a box. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@O303",
+                "e" : "@O305",
+                "s" : "@O313" 
+            },
+            "look" : {
+                "box" : "This looks like a trapdoor!",
+                "trapdoor" : "Maybe you should see where it goes." 
+            },
+            "use" : {
+                "trapdoor" : "@B224" 
+            } 
+        },
+        "O305" : {
+            "description" : "You are inside Room 305. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@O304",
+                "e" : "@O306",
+                "s" : "@O314" 
+            } 
+        },
+        "O306" : {
+            "description" : "You are inside Room 306. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@O305",
+                "e" : "@O307",
+                "s" : "@O315" 
+            } 
+        },
+        "O307" : {
+            "description" : "You are inside Room 307. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@O306",
+                "e" : "@O308",
+                "s" : "@O316" 
+            } 
+        },
+        "O308" : {
+            "description" : "You are inside Room 308. You see something in the corner that appears to some sort of a box. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@O307",
+                "e" : "@O309",
+                "s" : "@O317" 
+            },
+            "look" : {
+                "box" : "This looks like a trapdoor!",
+                "trapdoor" : "Maybe you should see where it goes." 
+            },
+            "use" : {
+                "trapdoor" : "@P402" 
+            } 
+        },
+        "O309" : {
+            "description" : "You are inside Room 309. Doors lead west and south.",
+            "go" : {
+                "w" : "@O308",
+                "s" : "@O318" 
+            } 
+        },
+        "O310" : {
+            "description" : "You are inside Room 310. You see something in the corner that appears to some sort of a box. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@O301",
+                "e" : "@O311",
+                "s" : "@O319" 
+            },
+            "look" : {
+                "box" : "This looks like a trapdoor!",
+                "trapdoor" : "Maybe you should see where it goes." 
+            },
+            "use" : {
+                "trapdoor" : "@G120" 
+            } 
+        },
+        "O311" : {
+            "description" : "You are inside Room 311. Doors lead in all directions.",
+            "go" : {
+                "n" : "@O302",
+                "w" : "@O310",
+                "e" : "@O312",
+                "s" : "@O320" 
+            } 
+        },
+        "O312" : {
+            "description" : "You are inside Room 312. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@O303",
+                "w" : "@O311",
+                "e" : "@O313" 
+            } 
+        },
+        "O313" : {
+            "description" : "You are inside Room 313. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@O304",
+                "w" : "@O312",
+                "e" : "@O314" 
+            } 
+        },
+        "O314" : {
+            "description" : "You are inside Room 314. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@O305",
+                "w" : "@O313",
+                "e" : "@O315" 
+            } 
+        },
+        "O315" : {
+            "description" : "You are inside Room 315. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@O306",
+                "w" : "@O314",
+                "e" : "@O316" 
+            } 
+        },
+        "O316" : {
+            "description" : "You are inside Room 316. You see something in the corner that appears to some sort of a box. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@O307",
+                "w" : "@O315",
+                "e" : "@O317" 
+            },
+            "look" : {
+                "box" : "This looks like a trapdoor!",
+                "trapdoor" : "Maybe you should see where it goes." 
+            },
+            "use" : {
+                "trapdoor" : "@O353" 
+            } 
+        },
+        "O317" : {
+            "description" : "You are inside Room 317. Doors lead in all directions.",
+            "go" : {
+                "n" : "@O308",
+                "w" : "@O316",
+                "e" : "@O318",
+                "s" : "@O321" 
+            } 
+        },
+        "O318" : {
+            "description" : "You are inside Room 318. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@O309",
+                "w" : "@O317",
+                "s" : "@O322" 
+            } 
+        },
+        "O319" : {
+            "description" : "You are inside Room 319. Doors lead north, east,  and south.",
+            "go" : {
+                "n" : "@O310",
+                "e" : "@O320",
+                "s" : "@O323" 
+            } 
+        },
+        "O320" : {
+            "description" : "You are inside Room 320. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@O311",
+                "w" : "@O319",
+                "s" : "@O324" 
+            } 
+        },
+        "O321" : {
+            "description" : "You are inside Room 321. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@O317",
+                "e" : "@O322",
+                "s" : "@O325" 
+            } 
+        },
+        "O322" : {
+            "description" : "You are inside Room 322. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@O318",
+                "w" : "@O321",
+                "s" : "@O326" 
+            } 
+        },
+        "O323" : {
+            "description" : "You are inside Room 323. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@O319",
+                "e" : "@O324",
+                "s" : "@O327" 
+            } 
+        },
+        "O324" : {
+            "description" : "You are inside Room 324. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@O320",
+                "w" : "@O323",
+                "s" : "@O328" 
+            } 
+        },
+        "O325" : {
+            "description" : "You are inside Room 325. You see something in the corner that looks appears to be some sort of a box. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@O321",
+                "e" : "@O326",
+                "s" : "@O329" 
+            },
+            "look" : {
+               "box" : "This looks like a trapdoor!",
+               "trapdoor" : "Maybe you should see where it goes."
+            },
+            "use" : {
+               "trapdoor" : "@outside1"
+            }
+        },
+        "O326" : {
+            "description" : "You are inside Room 326. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@O322",
+                "w" : "@O325",
+                "s" : "@O330" 
+            } 
+        },
+        "O327" : {
+            "description" : "You are inside Room 327. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@O323",
+                "e" : "@O328",
+                "s" : "@O331" 
+            } 
+        },
+        "O328" : {
+            "description" : "You are inside Room 328. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@O324",
+                "w" : "@O327",
+                "s" : "@O332" 
+            } 
+        },
+        "O329" : {
+            "description" : "You are inside Room 329. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@O325",
+                "e" : "@O330",
+                "s" : "@O333" 
+            } 
+        },
+        "O330" : {
+            "description" : "You are inside Room 330. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@O326",
+                "w" : "@O329",
+                "s" : "@O334" 
+            } 
+        },
+        "O331" : {
+            "description" : "You are inside Room 331. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@O327",
+                "e" : "@O332",
+                "s" : "@O335" 
+            } 
+        },
+        "O332" : {
+            "description" : "You are inside Room 332. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@O328",
+                "w" : "@O331",
+                "s" : "@O336" 
+            } 
+        },
+        "O333" : {
+            "description" : "You are inside Room 333. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@O329",
+                "e" : "@O334",
+                "s" : "@O342" 
+            } 
+        },
+        "O334" : {
+            "description" : "You are inside Room 334. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@O330",
+                "w" : "@O333",
+                "s" : "@O343" 
+            } 
+        },
+        "O335" : {
+            "description" : "You are inside Room 335. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@O331",
+                "e" : "@O336",
+                "s" : "@O344" 
+            } 
+        },
+        "O336" : {
+            "description" : "You are inside Room 336. Doors lead in all directions.",
+            "go" : {
+                "n" : "@O332",
+                "w" : "@O335",
+                "e" : "@O337",
+                "s" : "@O345" 
+            } 
+        },
+        "O337" : {
+            "description" : "You are inside Room 337. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@O336",
+                "e" : "@O338",
+                "s" : "@O346" 
+            } 
+        },
+        "O338" : {
+            "description" : "You are inside Room 338. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@O337",
+                "e" : "@O339",
+                "s" : "@O347" 
+            } 
+        },
+        "O339" : {
+            "description" : "You are inside Room 339. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@O338",
+                "e" : "@O340",
+                "s" : "@O348" 
+            } 
+        },
+        "O340" : {
+            "description" : "You are inside Room 340. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@O339",
+                "e" : "@O341",
+                "s" : "@O349" 
+            } 
+        },
+        "O341" : {
+            "description" : "You are inside Room 341. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@O340",
+                "e" : "@O342",
+                "s" : "@O350" 
+            } 
+        },
+        "O342" : {
+            "description" : "You are inside Room 342. Doors lead in all directions.",
+            "go" : {
+                "n" : "@O333",
+                "w" : "@O341",
+                "e" : "@O343",
+                "s" : "@O351" 
+            } 
+        },
+        "O343" : {
+            "description" : "You are inside Room 343. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@O334",
+                "w" : "@O342",
+                "s" : "@O352" 
+            } 
+        },
+        "O344" : {
+            "description" : "You are inside Room 344. Doors lead north and east.",
+            "go" : {
+                "n" : "@O335",
+                "e" : "@O345" 
+            } 
+        },
+        "O345" : {
+            "description" : "You are inside Room 345. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@O336",
+                "w" : "@O344",
+                "e" : "@O346" 
+            } 
+        },
+        "O346" : {
+            "description" : "You are inside Room 346. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@O337",
+                "w" : "@O345",
+                "e" : "@O347" 
+            } 
+        },
+        "O347" : {
+            "description" : "You are inside Room 347. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@O338",
+                "w" : "@O346",
+                "e" : "@O348" 
+            } 
+        },
+        "O348" : {
+            "description" : "You are inside Room 348. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@O339",
+                "w" : "@O347",
+                "e" : "@O349" 
+            } 
+        },
+        "O349" : {
+            "description" : "You are inside Room 349. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@O340",
+                "w" : "@O348",
+                "e" : "@O350" 
+            } 
+        },
+        "O350" : {
+            "description" : "You are inside Room 350. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@O341",
+                "w" : "@O349",
+                "e" : "@O351" 
+            } 
+        },
+        "O351" : {
+            "description" : "You are inside Room 351. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@O342",
+                "w" : "@O350",
+                "e" : "@O352" 
+            } 
+        },
+        "O352" : {
+            "description" : "You are inside Room 352. Doors lead north and west.",
+            "go" : {
+                "n" : "@O343",
+                "w" : "@O351" 
+            } 
+        },
+        "O353" : {
+            "description" : "You are inside the main lobby on the third floor. In each of the four corners of the room, you see a different plant. You see a tree, a flower pot, a bush, and monkey grass. You also see stairs that lead upstairs and downstairs.",
+            "go" : {
+                "up" : "@P401",
+                "down" : "@B252" 
+            },
+            "look" : {
+                "tree" : "You see dirt.",
+                "flower pot" : "You see weeds.",
+                "bush" : "#orange key",
+                "monkey grass" : "You see leaves." 
+            } 
+        },
+        "P401" : {
+            "description" : "You are inside Room 401. Doors lead east and south.",
+            "go" : {
+                "e" : "@P402",
+                "s" : "@P410" 
+            } 
+        },
+        "P402" : {
+            "description" : "You are inside Room 402. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@P401",
+                "e" : "@P403",
+                "s" : "@P411" 
+            } 
+        },
+        "P403" : {
+            "description" : "You are inside Room 403. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@P402",
+                "e" : "@P404",
+                "s" : "@P412" 
+            } 
+        },
+        "P404" : {
+            "description" : "You are inside Room 404. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@P403",
+                "e" : "@P405",
+                "s" : "@P413" 
+            } 
+        },
+        "P405" : {
+            "description" : "You are inside Room 405. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@P404",
+                "e" : "@P406",
+                "s" : "@P414" 
+            } 
+        },
+        "P406" : {
+            "description" : "You are inside Room 406. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@P405",
+                "e" : "@P407",
+                "s" : "@P415" 
+            } 
+        },
+        "P407" : {
+            "description" : "You are inside Room 407. You see something in the corner that appears to some sort of a box. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@P406",
+                "e" : "@P408",
+                "s" : "@P416" 
+            },
+            "look" : {
+                "box" : "This looks like a trapdoor!",
+                "trapdoor" : "Maybe you should see where it goes." 
+            },
+            "use" : {
+                "trapdoor" : "@B225" 
+            } 
+        },
+        "P408" : {
+            "description" : "You are inside Room 408. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@P407",
+                "e" : "@P409",
+                "s" : "@P417" 
+            } 
+        },
+        "P409" : {
+            "description" : "You are inside Room 409. Doors lead west and south.",
+            "go" : {
+                "w" : "@P408",
+                "s" : "@P418" 
+            } 
+        },
+        "P410" : {
+            "description" : "You are inside Room 410. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@P401",
+                "e" : "@P411",
+                "s" : "@P419" 
+            } 
+        },
+        "P411" : {
+            "description" : "You are inside Room 411. Doors lead in all directions.",
+            "go" : {
+                "n" : "@P402",
+                "w" : "@P410",
+                "e" : "@P412",
+                "s" : "@P420" 
+            } 
+        },
+        "P412" : {
+            "description" : "You are inside Room 412. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@P403",
+                "w" : "@P411",
+                "e" : "@P413" 
+            } 
+        },
+        "P413" : {
+            "description" : "You are inside Room 413. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@P404",
+                "w" : "@P412",
+                "e" : "@P414" 
+            } 
+        },
+        "P414" : {
+            "description" : "You are inside Room 414. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@P405",
+                "w" : "@P413",
+                "e" : "@P415" 
+            } 
+        },
+        "P415" : {
+            "description" : "You are inside Room 415. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@P406",
+                "w" : "@P414",
+                "e" : "@P416" 
+            } 
+        },
+        "P416" : {
+            "description" : "You are inside Room 416. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@P407",
+                "w" : "@P415",
+                "e" : "@P417" 
+            } 
+        },
+        "P417" : {
+            "description" : "You are inside Room 417. Doors lead in all directions.",
+            "go" : {
+                "n" : "@P408",
+                "w" : "@P416",
+                "e" : "@P418",
+                "s" : "@P421" 
+            } 
+        },
+        "P418" : {
+            "description" : "You are inside Room 418. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@P409",
+                "w" : "@P417",
+                "s" : "@P422" 
+            } 
+        },
+        "P419" : {
+            "description" : "You are inside Room 419. You see something in the corner that appears to some sort of a box. Doors lead north, east,  and south.",
+            "go" : {
+                "n" : "@P410",
+                "e" : "@P420",
+                "s" : "@P423" 
+            },
+            "look" : {
+                "box" : "This looks like a trapdoor!",
+                "trapdoor" : "Maybe you should see where it goes." 
+            },
+            "use" : {
+                "trapdoor" : "@P453" 
+            } 
+        },
+        "P420" : {
+            "description" : "You are inside Room 420. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@P411",
+                "w" : "@P419",
+                "s" : "@P424" 
+            } 
+        },
+        "P421" : {
+            "description" : "You are inside Room 421. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@P417",
+                "e" : "@P422",
+                "s" : "@P425" 
+            } 
+        },
+        "P422" : {
+            "description" : "You are inside Room 422. You see something in the corner that appears to be some sort of a box. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@P418",
+                "w" : "@P421",
+                "s" : "@P426" 
+            },
+            "look" : {
+                "box" : "This looks like a trapdoor!",
+                "trapdoor" : "Maybe you should see where it goes." 
+            },
+            "use" : {
+                "trapdoor" : "@O333" 
+            } 
+        },
+        "P423" : {
+            "description" : "You are inside Room 423. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@P419",
+                "e" : "@P424",
+                "s" : "@P427" 
+            } 
+        },
+        "P424" : {
+            "description" : "You are inside Room 424. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@P420",
+                "w" : "@P423",
+                "s" : "@P428" 
+            } 
+        },
+        "P425" : {
+            "description" : "You are inside Room 425. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@P421",
+                "e" : "@P426",
+                "s" : "@P429" 
+            } 
+        },
+        "P426" : {
+            "description" : "You are inside Room 426. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@P422",
+                "w" : "@P425",
+                "s" : "@P430" 
+            } 
+        },
+        "P427" : {
+            "description" : "You are inside Room 427. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@P423",
+                "e" : "@P428",
+                "s" : "@P431" 
+            } 
+        },
+        "P428" : {
+            "description" : "You are inside Room 428. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@P424",
+                "w" : "@P427",
+                "s" : "@P432" 
+            } 
+        },
+        "P429" : {
+            "description" : "You are inside Room 429. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@P425",
+                "e" : "@P430",
+                "s" : "@P433" 
+            } 
+        },
+        "P430" : {
+            "description" : "You are inside Room 430. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@P426",
+                "w" : "@P429",
+                "s" : "@P434" 
+            } 
+        },
+        "P431" : {
+            "description" : "You are inside Room 431. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@P427",
+                "e" : "@P432",
+                "s" : "@P435" 
+            } 
+        },
+        "P432" : {
+            "description" : "You are inside Room 432. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@P428",
+                "w" : "@P431",
+                "s" : "@P436" 
+            } 
+        },
+        "P433" : {
+            "description" : "You are inside Room 433. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@P429",
+                "e" : "@P434",
+                "s" : "@P442" 
+            } 
+        },
+        "P434" : {
+            "description" : "You are inside Room 434. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@P430",
+                "w" : "@P433",
+                "s" : "@P443" 
+            } 
+        },
+        "P435" : {
+            "description" : "You are inside Room 435. Doors lead north, east, and south.",
+            "go" : {
+                "n" : "@P431",
+                "e" : "@P436",
+                "s" : "@P444" 
+            } 
+        },
+        "P436" : {
+            "description" : "You are inside Room 436. You see something in the corner that appears to be some sort of a box. Doors lead in all directions.",
+            "go" : {
+                "n" : "@P432",
+                "w" : "@P435",
+                "e" : "@P437",
+                "s" : "@P445" 
+            },
+            "look" : {
+               "box" : "This looks like a trapdoor!",
+               "trapdoor" : "Maybe you should see where it goes."
+            },
+            "use" : {
+               "trapdoor" : "@outside1"
+            } 
+        },
+        "P437" : {
+            "description" : "You are inside Room 437. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@P436",
+                "e" : "@P438",
+                "s" : "@P446" 
+            } 
+        },
+        "P438" : {
+            "description" : "You are inside Room 438. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@P437",
+                "e" : "@P439",
+                "s" : "@P447" 
+            } 
+        },
+        "P439" : {
+            "description" : "You are inside Room 439. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@P438",
+                "e" : "@P440",
+                "s" : "@P448" 
+            } 
+        },
+        "P440" : {
+            "description" : "You are inside Room 440. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@P439",
+                "e" : "@P441",
+                "s" : "@P449" 
+            } 
+        },
+        "P441" : {
+            "description" : "You are inside Room 441. Doors lead west, east, and south.",
+            "go" : {
+                "w" : "@P440",
+                "e" : "@P442",
+                "s" : "@P450" 
+            } 
+        },
+        "P442" : {
+            "description" : "You are inside Room 442. Doors lead in all directions.",
+            "go" : {
+                "n" : "@P433",
+                "w" : "@P441",
+                "e" : "@P443",
+                "s" : "@P451" 
+            } 
+        },
+        "P443" : {
+            "description" : "You are inside Room 443. Doors lead north, west, and south.",
+            "go" : {
+                "n" : "@P434",
+                "w" : "@P442",
+                "s" : "@P452" 
+            } 
+        },
+        "P444" : {
+            "description" : "You are inside Room 444. Doors lead north and east.",
+            "go" : {
+                "n" : "@P435",
+                "e" : "@P445" 
+            } 
+        },
+        "P445" : {
+            "description" : "You are inside Room 445. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@P436",
+                "w" : "@P444",
+                "e" : "@P446" 
+            } 
+        },
+        "P446" : {
+            "description" : "You are inside Room 446. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@P437",
+                "w" : "@P445",
+                "e" : "@P447" 
+            } 
+        },
+        "P447" : {
+            "description" : "You are inside Room 447. You see something in the corner that appears to some sort of a box. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@P438",
+                "w" : "@P446",
+                "e" : "@P448" 
+            },
+            "look" : {
+                "box" : "This looks like a trapdoor!",
+                "trapdoor" : "Maybe you should see where it goes." 
+            },
+            "use" : {
+                "trapdoor" : "@G115" 
+            } 
+        },
+        "P448" : {
+            "description" : "You are inside Room 448. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@P439",
+                "w" : "@P447",
+                "e" : "@P449" 
+            } 
+        },
+        "P449" : {
+            "description" : "You are inside Room 449. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@P440",
+                "w" : "@P448",
+                "e" : "@P450" 
+            } 
+        },
+        "P450" : {
+            "description" : "You are inside Room 450. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@P441",
+                "w" : "@P449",
+                "e" : "@P451" 
+            } 
+        },
+        "P451" : {
+            "description" : "You are inside Room 451. Doors lead north, west, and east.",
+            "go" : {
+                "n" : "@P442",
+                "w" : "@P450",
+                "e" : "@P452" 
+            } 
+        },
+        "P452" : {
+            "description" : "You are inside Room 452. Doors lead north and west.",
+            "go" : {
+                "n" : "@P443",
+                "w" : "@P451" 
+            } 
+        },
+        "P453" : {
+            "description" : "You are inside the main lobby on the fourth floor. In each of the four corners of the room, you see a different plant. You see a tree, a flower pot, a bush, and monkey grass. You also see stairs that lead downstairs.",
+            "go" : {
+                "down" : "@O352" 
+            },
+            "look" : {
+                "tree" : "You see mud.",
+                "flower pot" : "You see bugs.",
+                "bush" : "#rope",
+                "monkey grass" : "#purple key" 
+            } 
+        },
+        "outside1" : {
+            "description" : "You are outside leaning against a big tree. You see a locked green gate to the south.",
+            "look" : {
+                "big tree" : "There is a large hollow staring at you.",
+                "large hollow" : "There appears to be a doorknob inside the hollow!",
+                "doorknob" : "You should try to use it and see what happens.",
+                "green gate" : "Maybe a green key would unlock the gate." 
+            },
+            "use" : {
+                "doorknob" : "@P453",
+                "#green key" : "^outside1.unlocked" 
+            } 
+        },
+        "outside1.unlocked" : {
+            "description" : "You are outside leaning against a big tree. You see an unlocked green gate to the south and a locked blue gate behind it.",
+            "look" : {
+                "big tree" : "There is a large hollow staring at you.",
+                "large hollow" : "There appears to be a doorknob inside the hollow!",
+                "doorknob" : "You should try to use it and see what happens.",
+                "blue gate" : "Maybe a blue key would unlock the gate." 
+            },
+            "use" : {
+                "doorknob" : "@P453",
+                "#blue key" : "^outside1.unlocked2" 
+            } 
+        },
+        "outside1.unlocked2" : {
+            "description" : "You are outside leaning against a big tree. You see an unlocked green gate to the south and an unlocked blue gate behind it.",
+            "look" : {
+                "big tree" : "There is a large hollow staring at you.",
+                "large hollow" : "There appears to be a doorknob inside the hollow!",
+                "doorknob" : "You should try to use it and see what happens." 
+            },
+            "use" : {
+                "doorknob" : "@P453" 
+            },
+            "go" : {
+                "s" : "@outside2" 
+            } 
+        },
+        "outside2" : {
+            "description" : "You are in a clearing outside. You see trails leading north and west and a locked orange gate to the south.",
+            "look" : {
+                "orange gate" : "Maybe an orange key would unlock the gate." 
+            },
+            "use" : {
+                "#orange key" : "^outside2.unlocked" 
+            },
+            "go" : {
+                "n" : "@outside1",
+                "w" : "@outside3" 
+            } 
+        },
+        "outside2.unlocked" : {
+            "description" : "You are in a clearing outside. You see trails leading north and west and an unlocked orange gate to the south and a locked purple gate behind it.",
+            "look" : {
+                "purple gate" : "Maybe a purple key would unlock the gate." 
+            },
+            "use" : {
+                "#purple key" : "^outside2.unlocked2" 
+            },
+            "go" : {
+                "n" : "@outside1",
+                "w" : "@outside3" 
+            } 
+        },
+        "outside2.unlocked2" : {
+            "description" : "You are in a clearing outside. You see trails leading north and west and an unlocked orange gate to the south and an unlocked purple gate behind it.",
+            "go" : {
+                "n" : "@outside1",
+                "s" : "@outside4",
+                "w" : "@outside3" 
+            } 
+        },
+        "outside3" : {
+            "description" : "You are in a clearing outside on the edge of a swamp. There are cattails surrounding the swamp. You see a trail leading east.",
+            "look" : {
+                "cattails" : "You see a wooden door in the ground.",
+                "wooden door" : "It looks like a trapdoor",
+                "trapdoor" : "Maybe you should find out where it goes." 
+            },
+            "use" : {
+                "trapdoor" : "@G101" 
+            },
+            "go" : {
+                "e" : "@outside2" 
+            } 
+        },
+        "outside4" : {
+            "description" : "You see a purple house. Congratulations! You win!",
+            "go" : {
+               "n" : "@outside2"
+            }
+        } 
+    }
+}

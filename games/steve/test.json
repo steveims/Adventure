@@ -1,0 +1,44 @@
+{ "start" : "L1",
+  "description" : "Search through the woods for a pot of gold, but don't get lost!",
+  "location_definitions" : {
+    "L1" : {
+      "description" : "You are standing in front of a house.  There is a flowerpot on the front porch\nand a sign hanging on the door.  Trails lead north and west.",
+      "look" : {
+        "flowerpot" : "#key",
+        "sign" : "\"Good luck finding the pot of gold!\""},
+      "go" : {
+        "n" : "@L2",
+        "w" : "@L4"}},
+    "L2" : {
+      "description" : "You are in the woods.  There is a swing hanging from the tallest tree.\nTrails lead west and south.",
+      "look" : {
+        "swing" : "Looks like fun."},
+      "use" : {
+        "swing" : "Wheee!!!"},
+      "go" : {
+        "s" : "@L1",
+        "w" : "@L3"}},
+    "L3" : {
+      "description" : "You are in a clearing.  Trails lead east and south.\nA locked gate blocks another trail to the north.",
+      "use" : {
+        "#key" : ["The gate swings open.", "^L3.unlocked"]},
+      "go" : {
+        "s" : "@L4",
+        "e" : "@L2"}},
+    "L3.unlocked" : {
+      "description" : "You are in a clearing.  Trails lead north, east and south.",
+      "use" : {
+        "#key" : "^L3"},
+      "go" : {
+        "s" : "@L4",
+        "e" : "@L2",
+        "n" : "@L5"}},
+    "L4" : {
+      "description" : "You are in the woods.  Trails lead east and north.",
+      "go" : {
+        "n" : "@L3",
+        "e" : "@L1"}},
+    "L5" : {
+      "description" : "You found the pot of gold!  You win!",
+      "go" : {
+        "s" : "@L3"}}}}

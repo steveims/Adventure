@@ -1,0 +1,124 @@
+{
+    "start" : "B1",
+    "description" : "DO NOT PLAY! NOT READY!",
+    "location_definitions" : {
+        "B1" : {
+            "description" : "You are on the south side of a river. You see a trail on the north side of the river leading into the woods. You see a boat floating beside a dock.",
+            "look" : {
+                "boat" : "That looks like a nice boat." 
+            },
+            "use" : {
+                "boat" : "@B2" 
+            } 
+        },
+        "B2" : {
+            "description" : "You are in a clearing on the north side of a river. You see a boat by a river to the south. Trails lead north and west.",
+            "look" : {
+                "boat" : "That looks like a nice boat." 
+            },
+            "use" : {
+                "boat" : "@B1" 
+            },
+            "go" : {
+                "n" : "@B4",
+                "w" : "@B3" 
+            } 
+        },
+        "B3" : {
+            "description" : "You are in the woods near some bushes. Trails lead north and east.",
+            "look" : {
+                "bushes" : "#key" 
+            },
+            "go" : {
+                "n" : "@B5",
+                "e" : "@B2" 
+            } 
+        },
+        "B4" : {
+            "description" : "You are in the woods.  You see a low-hanging limb on the tree to the west. Trails lead north, west, and south.",
+            "look" : {
+                "limb" : "Look at those leaves!",
+                "leaves" : "#rope" 
+            },
+            "go" : {
+                "n" : "@B6",
+                "w" : "@B5",
+                "s" : "@B3" 
+            } 
+        },
+        "B5" : {
+            "description" : "You are in the woods. Trails lead north, east, and south.",
+            "go" : {
+                "n" : "@B7",
+                "e" : "@B4",
+                "s" : "@B3" 
+            } 
+        },
+        "B6" : {
+            "description" : "You are in the woods near some bushes. Trails lead west and south.",
+            "go" : {
+                "w" : "@B7",
+                "s" : "@B4" 
+            },
+            "look" : {
+                "bushes" : "There's nothing in here."
+             } 
+        },
+        "B7" : {
+            "description" : "You are on the south side of a gorge. You do not see a bridge. You see a trail leading north on the north side of the gorge. Trails lead east and south.",
+            "use" : {
+                "rope" : "^B7.gorge" 
+            },
+            "go" : {
+                "e" : "@B6",
+                "s" : "@B5" 
+            } 
+        },
+        "B7.gorge" : {
+            "description" : "You made a rope bridge leading north. Maybe it is strong enough to cross. Trails lead east and south.",
+            "go" : {
+                "e" : "@B6",
+                "s" : "@B5",
+                "n" : "@B8" 
+            } 
+        },
+        "B8" : {
+            "description" : "You made it across the gorge. That rope was pretty sturdy. You are in a clearing. You see a trail leading north behind a locked gate. You see a trail leading south towards a gorge with a rope bridge across it.",
+            "go" : {
+                "s" : "@B7" 
+            },
+            "use" : {
+                "#key" : "^B8.unlocked" 
+            } 
+        },
+        "B8.unlocked" : {
+            "description" : "You are in a clearing. You a see a trail leading north through an unlocked gate. You see a trail leading south towards a gorge with a rope bridge across it." ,
+            "go" : {
+                "n" : "@B9",
+                "s" : "@B7" 
+            } 
+        },
+        "B9" : {
+            "description" : "You are on the south side of a lake. You see a tree to the west with a swing hanging down from a strong-looking branch. You see a bridge going across the lake just out of your reach. You see a trail on the north side of the lake. You see a trail leading east.",
+            "look" : {
+                "swing" : "It looks long enough to reach the bridge." 
+            },
+            "go" : {
+                "e" : "@B8" 
+            },
+            "use" : {
+                "swing" : "@B10" 
+            } 
+        },
+        "B10" : {
+            "description" : "You have made it across the bridge. You are in the woods. Trails lead east and south.",
+            "go" : {
+                "e" : "@B11",
+                "s" : "@B9" 
+            } 
+        },
+        "B11" : {
+            "description" : "Congratulations! You found the purple house! You win!" 
+        } 
+    } 
+}

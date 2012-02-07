@@ -1,0 +1,448 @@
+{
+    "start" : "B1",
+    "description" : "DO NOT PLAY! NOT READY!",
+    "location_definitions" : {
+        "B1" : {
+            "description" : "You are leaning against an enormous tree. A trail leads east.",
+            "look" : {
+                "enormous tree" : "That hollow is so big you could sit in it.",
+                "hollow" : "Just a bunch of wet leaves.",
+                "wet leaves" : "#blue key" 
+            },
+            "go" : {
+                "e" : "@B2" 
+            } 
+        },
+        "B2" : {
+            "description" : "You are on the west side of a blue shack. The door appears to be locked. Trails lead west and south.",
+            "look" : {
+                "blue shack" : "A blue key might work." 
+            },
+            "use" : {
+                "#blue key" : "^B2.unlocked" 
+            },
+            "go" : {
+                "w" : "@B1",
+                "s" : "@B4" 
+            } 
+        },
+        "B2.unlocked" : {
+            "description" : "You are in a clearing on the west side of a blue shack. The door is unlocked. Trails lead west and south.",
+            "go" : {
+                "w" : "@B1",
+                "s" : "@B4",
+                "e" : "@B3" 
+            } 
+        },
+        "B3" : {
+            "description" : "You are inside the blue shack. There is a ladder in the corner and an open door to the west.",
+            "use" : {
+                "ladder" : "@B3.upstairs" 
+            },
+            "go" : {
+                "w" : "@B2" 
+            } 
+        },
+        "B3.upstairs" : {
+            "description" : "You are upstairs in the blue shack. You appear to be in a loft. You see ladder close to you and a piece of rope lying on the floor.",
+            "use" : {
+                "ladder" : "@B3",
+                "trapdoor" : "@B6" 
+            },
+            "look" : {
+                "rope" : "This is the handle to a trapdoor!",
+                "trapdoor" : "You wonder where this goes . . . but there's only one way to find out!" 
+            } 
+        },
+        "B4" : {
+            "description" : "You are in a clearing by some bushes. Trails lead north and west.",
+            "go" : {
+                "w" : "@B5",
+                "n" : "@B2" 
+            },
+            "look" : {
+                "bushes" : "Nothing useful in here. Just a bird's nest." 
+            } 
+        },
+        "B5" : {
+            "description" : "You are in a clearing near some bushes. A trail leads east.",
+            "go" : {
+                "e" : "@B4" 
+            },
+            "look" : {
+                "bushes" : "You see a blue box in here. It feels cold.",
+                "blue box" : "Hey! This isn't a box! It's a cooler!",
+                "cooler" : "You feel a latch on the side.",
+                "latch" : "Maybe you should try and open it.",
+                "dr. pepper" : "Maybe you can have some." 
+            },
+            "use" : {
+                "latch" : "Yes! You opened the cooler. You see Dr. Pepper nestled in some ice.",
+                "dr. pepper" : "That tastes good and cold." 
+            } 
+        },
+        "B6" : {
+            "description" : "You are inside a room that is inside a castle. You see wooden walling around the room. Hallways lead in all directions.",
+            "go" : {
+                "w" : "@B10",
+                "s" : "@B9",
+                "n" : "@B7",
+                "e" : "@B8" 
+            },
+            "look" : {
+                "wooden walling" : "A panel on the north wall appears to be loose.",
+                "panel" : "You see the entrance to a tunnel! You wonder where it goes . . ." 
+            },
+            "use" : {
+                "tunnel" : "@B3.upstairs" 
+            } 
+        },
+        "B7" : {
+            "description" : "You are in a room. You see a window looking outside. Hallways lead west, east, and south.",
+            "go" : {
+                "w" : "@B15",
+                "e" : "@B12",
+                "s" : "@B6" 
+            },
+            "look" : {
+                "window" : "It's bright and sunny outside, but you see storm clouds approaching. You had better hurry before it starts to rain." 
+            } 
+        },
+        "B8" : {
+            "description" : "You are in a room. You see a flowerpot in the corner. Hallways lead in all directions.",
+            "go" : {
+                "w" : "@B6",
+                "n" : "@B12",
+                "e" : "@B17",
+                "s" : "@B13" 
+            },
+            "look" : {
+                "flowerpot" : "These flowers smell good." 
+            } 
+        },
+        "B9" : {
+            "description" : "You are in a room. You feel a draft coming from up above you. Hallways lead in all directions.",
+            "look" : {
+                "up" : "You see a ladder." 
+            },
+            "go" : {
+                "w" : "@B14",
+                "n" : "@B6",
+                "s" : "@B22",
+                "e" : "@B13" 
+            },
+            "use" : {
+                "ladder" : "@B9.upstairs" 
+            } 
+        },
+        "B9.upstairs" : {
+            "description" : "It's very dusty and chilly up here. There must be holes in the ceiling. You might want to go back down the ladder. Nothing useful up here anyway.",
+            "use" : {
+                "ladder" : "@B9" 
+            } 
+        },
+        "B10" : {
+            "description" : "You are in a room. You see wooden walling around the room. Hallways lead in all directions.",
+            "go" : {
+                "e" : "@B6",
+                "s" : "@B14",
+                "n" : "@B15",
+                "w" : "@B26" 
+            },
+            "look" : {
+                "wooden walling" : "A panel on the back wall seems to be out of place.",
+                "panel" : "You have found a tunnel! You wonder where it goes." 
+            },
+            "use" : {
+                "tunnel" : "@B11" 
+            } 
+        },
+        "B11" : {
+            "description" : "Wow, it's very dusty in this tunnel and you see cobwebs everywhere. Someone should clean this out. Ah . . . the tunnel goes west and east. You should be out soon.",
+            "go" : {
+                "w" : "@B12",
+                "e" : "@B10" 
+            } 
+        },
+        "B12" : {
+            "description" : "You are in a room. You see wooden walling around the room. Hallways lead west, east, and south.",
+            "go" : {
+                "w" : "@B7",
+                "e" : "@B16",
+                "s" : "@B8" 
+            },
+            "look" : {
+                "wooden walling" : "A panel on the west wall seems out of place.",
+                "panel" : "You see a tunnel! You wonder where it goes." 
+            },
+            "use" : {
+                "tunnel" : "@B11" 
+            } 
+        },
+        "B13" : {
+            "description" : "You are in a room. You see a . . . VENDING MACHINE . . . in the corner! You wonder what that is doing in a castle. Hallways lead north, west, and east.",
+            "look" : {
+                "vending machine" : "This has all kinds of goodies in it. You can get a snack and a drink for 2 dollars!" 
+            },
+            "use" : {
+                "2 dollar bill" : "CLINK! Yum . . . it's hard to believe that was only worth 2 dollars. Now you feel refreshed." 
+            },
+            "go" : {
+                "n" : "@B8",
+                "w" : "@B9",
+                "e" : "@B18" 
+            } 
+        },
+        "B14" : {
+            "description" : "You are in a room standing on a rug. Hallways lead in all directions.",
+            "look" : {
+                "rug" : "You see a wooden door. It looks like a trapdoor.",
+                "trapdoor" : "You have already been through one trapdoor, and now you wonder where this one goes." 
+            },
+            "use" : {
+                "trapdoor" : "@B16" 
+            },
+            "go" : {
+                "w" : "@B25",
+                "s" : "@B23",
+                "n" : "@B10",
+                "e" : "@B9" 
+            } 
+        },
+        "B15" : {
+            "description" : "You are in a room. On the south wall, you see an old painting of someone's portrait. Their eyes seem to follow you. Hallways lead east and south.",
+            "go" : {
+                "e" : "@B7",
+                "s" : "@B10" 
+            },
+            "look" : {
+                "painting" : "You see a hole behind the painting.",
+                "hole" : "It's too dark to see in here." 
+            },
+            "use" : {
+                "flashlight" : "^B15.light" 
+            } 
+        },
+        "B15.light" : {
+            "description" : "You now look in the hole. Something catches your eye in the corner.",
+            "look" : {
+                "corner" : "You see a pile of money.",
+                "pile of money" : "#20 dollar bill" 
+            },
+            "go" : {
+                "s" : "@B10",
+                "e" : "@B7" 
+            } 
+        },
+        "B16" : {
+            "description" : "You are in a room. It looks like a dining room. You see a table and chairs in the center of the room. Hallways lead west and south.",
+            "go" : {
+                "w" : "@B12",
+                "s" : "@B17" 
+            },
+            "look" : {
+                "table" : "A wooden door seems to be under here!",
+                "wooden door" : "This appears to be another trapdoor. You wonder where THIS one leads . . .",
+                "chairs" : "You can eat after you find the purple house." 
+            },
+            "use" : {
+                "trapdoor" : "@B14" 
+            } 
+        },
+        "B17" : {
+            "description" : "You are standing in a room. It appears to be a bedroom. You see a bed in the corner. It looks nice and soft. Hallways lead north, south, and west.",
+            "go" : {
+                "s" : "@B18",
+                "n" : "@B16",
+                "w" : "@B8" 
+            },
+            "look" : {
+                "bed" : "Maybe you can come back later and sleep on that nicely plumped up pillow.",
+                "pillow" : "#rope" 
+            } 
+        },
+        "B18" : {
+            "description" : "You are in a room. It looks like a library. There are rows of books all around you. All the books are brown except for three. They are green, blue, and orange. Hallways lead north, south, and west.",
+            "look" : {
+                "green book" : "This book is titled: \"A Guide for Trolls\". You see a bookmark on page 370.",
+                "page 370" : "You see a section is highlighted in purple. It says, \"When or if you ever encounter a troll and he is guarding a bridge, he will probably ask you for money. He is asking for 20 dollars most likely. Do not give him extra money, because he will keep it and not give you change. (Mostly because he does not carry change).\" You wonder why this is highlighted.",
+                "blue book" : "This book is titled: \"Princesses\". You see a bookmark on page 52.",
+                "page 52" : "You see a section highlighted in purple. It says, \"Once upon a time, in a coreign fountry, there lived a geautiful birl by the name of Rindercella. She lived with her mugly uther and her two sad blisters. One day, the prandsome hince decided to have a bancy fall. He invited people from riles amound. Especially the pich reople. Rindercella could not go to the bancy fall because all she had to wear was some ritty old dags. So she cat down and sried. Then her gairy fodmother appeared. She asked Rindercella, \"Why aren't you at the bancy fall?\" Rindercella replied, \"Because all I have to wear are these ritty old dags.\" Her gairy fodmother said, \"Foop!\" And there was the dranciest fess you ever did see. Her gairy fodmother said \"Make sure you're back by nidmight. Because then the drancy fess will turn into those ritty old dags you had on.\" Rindercella said \"I will be. Thank you so much.\" So Rindercella went to the bancy fall and danced with the prandsome hince. They danced and they danced and they lell in fove. Then the clock struck nidmight. Rindercella raced down the stairs and just as she beached the rottom she slopped her dripper! The next day the pransome hince went all over the countryside looking for the geautiful birl who had slopped her dripper. He came to Rindercella's house. He tried on her mugly uther and it fidn't dit. He tried it on her two sad blisters and it fidn't dit. He tried it on Rindercella and it fid did. Rindercella and the pransome hince got married and lived happily ever after. THE END.\" You think this is a mixed up version of Cinderella but you are not sure.",
+                "orange book" : "You hear a noise behind you. You turn around and you see a . . . SECRET HALLWAY! It heads south." 
+            },
+            "go" : {
+                "n" : "@B17",
+                "w" : "@B13",
+                "s" : "@B19" 
+            } 
+        },
+        "B19" : {
+            "description" : "You see what looks like a chimney hole above you. Maybe this used to be a kitchen. Tunnels lead north and south.",
+            "look" : {
+                "chimney hole" : "The chimney wouldn't work now. It's probably all clogged up." 
+            },
+            "go" : {
+                "n" : "@B18",
+                "s" : "@B20" 
+            } 
+        },
+        "B20" : {
+            "description" : "You are standing in a room. You see a ladder dangling above your head. It looks like the ladder leads to a trapdoor. A tunnel leads north.",
+            "look" : {
+                "trapdoor" : "You wonder where it goes." 
+            },
+            "use" : {
+                "ladder" : "@B27" 
+            },
+            "go" : {
+                "n" : "@B19" 
+            } 
+        },
+        "B21" : {
+            "description" : "You are past the troll and his bridge now. You see a pantry in front of you. The only way out is to go across the bridge again.",
+            "look" : {
+                "pantry" : "You see an empty cereal box, an empty tin that used to have peanuts in it, and an empty milk jug.",
+                "cereal box" : "You see that it is completely empty.",
+                "tin" : "#2 dollar bill",
+                "milk jug" : "Nothing in here. Not even a drop of anything." 
+            },
+            "use" : {
+                "bridge" : "@B22" 
+            } 
+        },
+        "B22" : {
+            "description" : "You are standing at the west side of a bridge. Hallways lead north and west.",
+            "go" : {
+                "n" : "@B9",
+                "w" : "@B23" 
+            },
+            "use" : {
+                "#20 dollar bill" : "^B22.water",
+                "#cup of water" : "You might want to give him the 20 dollars first. That's the most important.",
+                "bridge" : "All of a sudden, a troll jumps out! \"Ha! Ha! Now where do you think you're going?\" You tell him that you want to go across the bridge. \"Oh, so you think you can get across so easily? Not when I'm here. You have to pay.\" You ask him how much. \"Now, why should I tell you? That would just make it easy! Go figure it out. Oh, and while you're at it, get me a cup of water and I'll let you through.\" You don't think he's very nice, but if you want to go across, you might want to do what he asks." 
+            } 
+        },
+        "B22.water" : {
+            "description" : " The troll takes it, but he looks like he wants something else . . .",
+            "use" : {
+                "#cup of water" : [
+                    "The troll chugs it down. \"All right. I guess I have to let you pass now.\" That troll sends shivers down your spine.",
+                    "^B22.bridge" 
+                ] 
+            },
+            "go" : {
+                "w" : "@B23",
+                "n" : "@B9" 
+            } 
+        },
+        "B22.bridge" : {
+            "description" : "You see the troll glaring at you, but it looks like you can pass across the bridge. Hallways lead north and west.",
+            "use" : {
+                "bridge" : "@B21" 
+            },
+            "go" : {
+                "n" : "@B9",
+                "w" : "@B23" 
+            } 
+        },
+        "B23" : {
+            "description" : "As you step into a room, you hear a crunch. You look down and there is a dead cockroach at your feet. You must have just squished him. If there was one, there's probably others. You might want to get out of here fast. Hallways lead north, east, and west.",
+            "go" : {
+                "n" : "@B14",
+                "w" : "@B24",
+                "e" : "@B22" 
+            } 
+        },
+        "B24" : {
+            "description" : "You are in a room. As you walk in, a string touches your face. Hallways lead north and east.",
+            "look" : {
+                "string" : "You wonder what this does. You should try and pull it." 
+            },
+            "use" : {
+                "string" : "A panel on the south wall slides to the side. Now there is a secret tunnel to . . . wait . . . where does it go?" 
+            },
+            "go" : {
+                "s" : "@B28",
+                "n" : "@B25",
+                "e" : "@B23" 
+            } 
+        },
+        "B25" : {
+            "description" : "You are in a room. There is a suit of armor to the west. Hallways lead north, east, and south.",
+            "look" : {
+                "suit of armor" : "This guy has all the armor. Even a sword and shield! Stay away from that sword. It still looks sharp, although it looks pretty bright. You wonder why.",
+                "shield" : "It has a dragon on it and it looks pretty new. You wonder what battles this was used in (if any).",
+                "sword" : "#flashlight" 
+            },
+            "go" : {
+                "n" : "@B26",
+                "e" : "@B14",
+                "s" : "@B24" 
+            } 
+        },
+        "B26" : {
+            "description" : "You are in a room. Nothing seems to be in here. Hallways lead east and south.",
+            "go" : {
+                "e" : "@B10",
+                "s" : "@B25" 
+            } 
+        },
+        "B27" : {
+            "description" : "You are in a room that appears to be a kitchen. You see a refrigerator in the corner.",
+            "go" : {
+                "n" : "@B20" 
+            },
+            "look" : {
+                "refrigerator" : "You see a fridge part and a freezer part.",
+                "fridge" : "#cup of water",
+                "freezer" : "It doesn't feel cold in here. You see a box. Maybe that's the icebox.",
+                "box" : "This isn't an icebox at all! It's a secret tunnel. It heads north." 
+            } 
+        },
+        "B28" : {
+            "description" : "You leaning a tree by a lake. It feels good to be out of that castle. Trails lead south and east.",
+            "look" : {
+                "tree" : "A string is hanging down from one of the branches.",
+                "string" : "You should pull it and see what happens.",
+                "lake" : "The water is very clear." 
+            },
+            "go" : {
+                "s" : "@B30",
+                "e" : "@B29" 
+            },
+            "use" : {
+                "string" : "Wow! A little door inside the trunk of the tree opened! You wonder where this would go.",
+                "door" : "@B24" 
+            } 
+        },
+        "B29" : {
+            "description" : "You are standing in a clearing. You see an orange gate to the south. A trail leads west.",
+            "go" : {
+                "w" : "@B28" 
+            },
+            "use" : {
+                "#orange key" : "^B29.unlocked" 
+            } 
+        },
+        "B29.unlocked" : {
+            "description" : "You are standing in a clearing. You see an unlocked orange gate to the south. A trail leads west.",
+            "go" : {
+                "s" : "@B31",
+                "w" : "@B28" 
+            } 
+        },
+        "B30" : {
+            "description" : "You are in a clearing near a swamp. You see a clump of reeds near the edge of the swamp. A trail leads north.",
+            "go" : {
+                "n" : "@B28" 
+            },
+            "look" : {
+                "reeds" : "#orange key",
+                "swamp" : "It looks muddy in there. It might be best to stay out of there." 
+            } 
+        },
+        "B31" : {
+            "description" : "You found the purple house! You win!" 
+        } 
+    } 
+}

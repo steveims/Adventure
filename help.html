@@ -1,0 +1,234 @@
+<html>
+<head>
+</head>
+<body>
+
+This page includes:
+<ul>
+<li><a href="#example">Example game</a>
+<li><a href="#syntax">Syntax details</a>
+</ul>
+
+<h3 id="example">Example game</h3>
+<p>The following example demonstrates all of the basic features for games.
+The easiest way to figure out what it does is to play it.  Just copy the
+content into a new game definition and you're ready to play.</p>
+
+<p>The game layout is shown below.  Players start at L1; they win when
+they reach L5.</p>
+
+<pre>
+  L5           
+  |            ^ N
+  |            |
+  L3 -- L2     |
+  |     |
+  |     |
+  L4 -- L1
+</pre>
+
+<p>The key, which is found in the flowerpot at L1, is required to open
+the gate at L3.  Note that using the key at L3 changes the state of that
+location to L3.unlocked (<tt>"use" : {"#key" : "^L3.unlocked"}</tt>).
+This notion simplifies the game setup, because L2, L4, and L5 need
+connect only to the primary location (L3), not all states of L3.</p>
+
+<form>
+<textarea style="background-color: #dddddd;" rows="47" cols="120" readonly>
+{ "start" : "L1",
+  "description" : "Search through the woods for a pot of gold, but don't get lost!",
+  "location_definitions" : {
+    "L1" : {
+      "description" : "You are standing in front of a house.  There is a flowerpot on the front porch\nand a sign hanging on the door.  Trails lead north and west.",
+      "look" : {
+        "flowerpot" : "#key",
+        "sign" : "\"Good luck finding the pot of gold!\""},
+      "go" : {
+        "n" : "@L2",
+        "w" : "@L4"}},
+    "L2" : {
+      "description" : "You are in the woods.  There is a swing hanging from the tallest tree.\nTrails lead west and south.",
+      "look" : {
+        "swing" : "Looks like fun."},
+      "use" : {
+        "swing" : "Wheee!!!"},
+      "go" : {
+        "s" : "@L1",
+        "w" : "@L3"}},
+    "L3" : {
+      "description" : "You are in a clearing.  Trails lead east and south.\nA locked gate blocks another trail to the north.",
+      "use" : {
+        "#key" : ["The gate swings open.", "^L3.unlocked"]},
+      "go" : {
+        "s" : "@L4",
+        "e" : "@L2"}},
+    "L3.unlocked" : {
+      "description" : "You are in a clearing.  Trails lead north, east and south.",
+      "use" : {
+        "#key" : "^L3"},
+      "go" : {
+        "s" : "@L4",
+        "e" : "@L2",
+        "n" : "@L5"}},
+    "L4" : {
+      "description" : "You are in the woods.  Trails lead east and north.",
+      "go" : {
+        "n" : "@L3",
+        "e" : "@L1"}},
+    "L5" : {
+      "description" : "You found the pot of gold!  You win!",
+      "go" : {
+        "s" : "@L3"}}}}
+</textarea>
+</form>
+
+<h3 id="syntax">Syntax details</h3>
+
+<p>The game definition is a <a href="http://json.org/">JSON</a> object
+that adheres to a schema defined by the adventure game.</p>
+
+<p>As an editor, the easiest way to ensure you have a valid JSON object is
+to edit your content in the handy 
+<a href="http://www.jsonlint.com/">JSONLint</a> validator.  After you've
+created a valid JSON object, then copy and paste the content into a game
+definition and try it out.  If you run into any problems (e.g. locations
+not linked as you intended), then repeat the process:  Edit in JSONLint;
+copy and paste into the game definition; and try it out.</p>
+
+<p>A few things to note about JSON:</p>
+<ul>
+<li>If you want to use double quotes within a string, then they
+    must be <i>escaped</i>.  For example:  <tt>"\"Good luck finding
+    the pot of gold!\""</tt></li>
+</ul>
+
+<p>Details about the schema:</p>
+
+<h4>Top-level properties</h4>
+<table border="1">
+<tr>
+  <th>Property</th>
+  <th>Required?</th>
+  <th>Value type</th>
+  <th>Comments</th>
+</tr>
+<tr>
+  <td><tt>start</tt></td>
+  <td>Required</td>
+  <td>string</td>
+  <td>Name of the location where players will start the game.
+  Must be defined in <tt>location_definition</tt>.</td>
+</tr>
+<tr>
+  <td><tt>description</tt></td>
+  <td>Required</td>
+  <td>string</td>
+  <td>Short description of the game.  This string is displayed in the
+  list of games as well as in the welcome message when a player
+  starts a game.</td>
+</tr>
+<tr>
+  <td><tt>location_definitions</tt></td>
+  <td>Required</td>
+  <td>object</td>
+  <td>name/value pairs, with:
+<ul>
+<li>name == location name
+<li>value == location definition (see below)
+</ul></td>
+</tr>
+</table>
+
+<h4>Location definition</h4>
+<table border="1">
+<tr>
+  <th>Property</th>
+  <th>Required?</th>
+  <th>Value type</th>
+  <th>Comments</th>
+</tr>
+<tr>
+  <td><tt>description</tt></td>
+  <td>Required</td>
+  <td>string</td>
+  <td>Displayed when the player reaches this location.</td>
+</tr>
+<tr>
+  <td><tt>look</tt></td>
+  <td>Optional</td>
+  <td>object</td>
+  <td>name/value pairs, with:
+<ul>
+<li>name == object to look at
+<li>value == response to <tt>look &lt;object&gt;</tt>
+</ul>
+
+There are two types of responses:
+<ul>
+<li>Indication of a portable item; value starts with a
+    "#" character, such as <tt>#key</tt>.  Users can take this item with
+    <tt>take key</tt>.  The game player generates the appropriate
+    response to a look command:
+  <ul>
+  <li>Item has not been taken:  <tt>You see a key.</tt>    
+  <li>Item has been taken:  <tt>You already found the key here.</tt>
+  </ul>
+<li>Text response.  If the value does not start with a "#", then the string
+    is the response to a look command.
+</ul>
+
+</td>
+</tr>
+<tr>
+  <td><tt>use</tt></td>
+  <td>Optional</td>
+  <td>object</td>
+  <td>name/value pairs, with:
+<ul>
+<li>name == item to be used (two representations; see below)
+<li>value == response to <tt>use &lt;object&gt;</tt>
+</ul>
+
+There are two representations for the item be to used:
+<ul>
+<li>Portable item; value starts with a "#" character.  This is typically
+    used to indicate an item that the player is supposed to <tt>take</tt>
+    in another location and bring as part of their inventory, such as
+    a key.
+<li>Fixed item; value does not start with a "#" character.  Typically
+    an item that is part of the location, such as a switch.
+</ul>
+
+The response can be a string or an array of strings.  For an array, the
+elements are processed in order.  The array form can be used, for example,
+with state changes:  The first element might be a text response that
+describes the change ("The gate swings open.") and the second commands
+the state change ("^L3.unlocked").
+
+There are three types of response strings:
+<ul>
+<li>New location; value starts with an "@" character.  For example,
+    <tt>@L5</tt> will move the player to location L5.
+<li>State change at the current location; value starts with a "^" character.
+    For example, <tt>^L3.unlocked</tt> means that a use command on that
+    item will change the current location to definition L3.unlocked.
+<li>Text response.  If the value does not start with an "@" or a "^",
+    then the string is the response to the use command.
+</ul>
+
+</td>
+</tr>
+<tr>
+  <td><tt>go</tt></td>
+  <td>Optional</td>
+  <td>object</td>
+  <td>name/value pairs, with:
+<ul>
+<li>name == direction
+<li>value == name of next location with an "@" prefix; response to <tt>go &lt;direction&gt;</tt>
+</ul></td>
+</tr>
+</table>
+
+</body>
+</html>

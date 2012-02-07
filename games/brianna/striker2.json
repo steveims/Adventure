@@ -1,0 +1,272 @@
+{
+    "start" : "B1",
+    "description" : "DO NOT PLAY! NOT READY!",
+    "location_definitions" : {
+        "B1" : {
+            "description" : "You are on the south side of a river. You see a boat to the east and bushes to the west.",
+            "look" : {
+                "boat" : "That looks like a nice boat.",
+                "bushes" : "#yellow key" 
+            },
+            "use" : {
+                "boat" : "@B2" 
+            } 
+        },
+        "B2" : {
+            "description" : "You are leaning against a tree on the north side of a river. A boat lies in the water to the south. Trails lead north and east.",
+            "look" : {
+                "boat" : "That looks like a nice boat.",
+                "tree" : "That is a big hollow.",
+                "hollow" : "Whoooo! Whoooo! Hmm . . . Guess that was an owl's hollow." 
+            },
+            "use" : {
+                "boat" : "@B1" 
+            },
+            "go" : {
+                "n" : "@B11",
+                "e" : "@B3" 
+            } 
+        },
+        "B3" : {
+            "description" : "You are on the west side of a yellow shack. You see a lock on the door. You see a trail leading west and a pier over a lake going north.",
+            "look" : {
+                "lock" : "A yellow key might work." 
+            },
+            "go" : {
+                "n" : "@B6",
+                "w" : "@B2" 
+            },
+            "use" : {
+                "#yellow key" : "^B3.unlocked" 
+            } 
+        },
+        "B3.unlocked" : {
+            "description" : "You are standing on the west side of a yellow shack. You see an unlocked door on the front porch. You see a trail leading west and a pier over a lake going north.",
+            "go" : {
+                "n" : "@B6",
+                "e" : "@B4",
+                "w" : "@B2" 
+            } 
+        },
+        "B4" : {
+            "description" : "You are inside the yellow shack. There are unlocked doors to the west and east.",
+            "go" : {
+                "w" : "@B3",
+                "e" : "@B5" 
+            } 
+        },
+        "B5" : {
+            "description" : "You are in a clearing near some bushes. You see a trail leading west.",
+            "go" : {
+                "w" : "@B4" 
+            },
+            "look" : {
+                "bushes" : "Nothing useful in here." 
+            } 
+        },
+        "B6" : {
+            "description" : "You are standing on a boat. You see stairs to the west. You see piers to the north, east, and south.",
+            "go" : {
+                "down" : "@B7",
+                "s" : "@B3",
+                "n" : "@B10",
+                "e" : "@B8" 
+            } 
+        },
+        "B7" : {
+            "description" : "You are on the lower level of the boat. You see lockers all around the room and stairs to the east.",
+            "go" : {
+                "up" : "@B6" 
+            },
+            "look" : {
+                "lockers" : "Just a gym bag and somebody's sneakers.",
+                "gym bag" : "#blue key",
+                "sneakers" : "Whew! Those smell!" 
+            } 
+        },
+        "B8" : {
+            "description" : "You are standing on the west side of an orange shack. The door seems to be locked. You see a pier going west and a trail leading north.",
+            "go" : {
+                "w" : "@B6",
+                "n" : "@B13" 
+            },
+            "use" : {
+                "#orange key" : "^B8.unlocked" 
+            },
+            "look" : {
+                "door" : "An orange key might work." 
+            } 
+        },
+        "B8.unlocked" : {
+            "description" : "You are standing on the west side of an orange shack. The door seems to be unlocked. You see a pier going west and a trail leading north." ,
+            "go" : {
+                "n" : "@B13",
+                "w" : "@B6",
+                "e" : "@B9" 
+            } 
+        },
+        "B9" : {
+            "description" : "You are inside the orange shack. You are standing on a nice-looking rug. There is an open door to the west.",
+            "look" : {
+                "rug" : "You have found a ladder." 
+            },
+            "go" : {
+                "w" : "@B8" 
+            },
+            "use" : {
+                "ladder" : "@B9.downstairs" 
+            } 
+        },
+        "B9.downstairs" : {
+            "description" : "You are downstairs in the orange shack. You see an old chest in the corner next to a bookshelf and a ladder dangling above your head.",
+            "look" : {
+                "chest" : "Achoo! That's a lot of dust.",
+                "bookshelf" : "You see a dictionary, a yearbook dating 1942, and a Sherlock Holmes book.",
+                "dictionary" : "This is a big, heavy book. You can hardly lift it. It might be best to leave that on the shelf.",
+                "yearbook" : "This book is so old, the pages would probably break if you touched it!",
+                "book" : "Something seems to be on page 67.",
+                "page 67" : "#green key" 
+            },
+            "use" : {
+                "ladder" : "@B9" 
+            } 
+        },
+        "B10" : {
+            "description" : "You are in a clearing by a tree. You see a pier going south and trails leading north, west, and east.",
+            "go" : {
+                "e" : "@B13",
+                "s" : "@B6",
+                "n" : "@B15",
+                "w" : "@B12" 
+            },
+            "look" : {
+                "tree" : "Looks easy to climb. You see a branch a bit above you.",
+                "branch" : "Something catches your eye in the leaves.",
+                "leaves" : "#lantern" 
+            } 
+        },
+        "B11" : {
+            "description" : "Wow! You have found a playground! Looks like fun. You see a swing set and a slide. Trails lead north and south.",
+            "use" : {
+                "swing set" : "Wheee!",
+                "slide" : "Wheee! THUNK . . . Ow, that hurt." 
+            },
+            "go" : {
+                "n" : "@B12",
+                "s" : "@B2" 
+            },
+            "look" : {
+                "swing set" : "Looks like fun.",
+                "slide" : "Looks like fun." 
+            } 
+        },
+        "B12" : {
+            "description" : "You are in a clearing by a tree. Trails lead north, east, and south.",
+            "go" : {
+                "n" : "@B16",
+                "e" : "@B10",
+                "s" : "@B11" 
+            },
+            "look" : {
+                "tree" : "You see a hollow.",
+                "hollow" : "You see a little box in there. Looks like a box of matches.",
+                "box" : "#matches" 
+            } 
+        },
+        "B13" : {
+            "description" : "You are standing at the entrance to a cave. It's too dark too see in there. Trails lead west and south.",
+            "use" : {
+                "#lantern" : "You might need something to get the light going. It has enough oil, though.",
+                "#matches" : "^B13.light" 
+            },
+            "go" : {
+                "n" : "@B14",
+                "w" : "@B10",
+                "s" : "@B8" 
+            } 
+        },
+        "B13.light" : {
+            "description" : "Looks like the cave goes north. Trails lead west and south.",
+            "go" : {
+                "n" : "@B14",
+                "w" : "@B10",
+                "s" : "@B8" 
+            } 
+        },
+        "B14" : {
+            "description" : "You are inside the cave now. There is a little rock shelf above you and a big boulder to the east. The tunnel goes west and south.",
+            "look" : {
+                "shelf" : "#orange key",
+                "boulder" : "Looks too heavy to move." 
+            },
+            "go" : {
+                "w" : "@B15",
+                "s" : "@B13" 
+            } 
+        },
+        "B15" : {
+            "description" : "You are standing outside a cave. It looks dark in there. You see trails leading north, west, and south.",
+            "go" : {
+                "w" : "@B16",
+                "s" : "@B10",
+                "n" : "@B17" 
+            },
+            "use" : {
+                "lantern" : "You might need something to get the light going. It has enough oil, though.",
+                "matches" : "^B15.light" 
+            } 
+        },
+        "B15.light" : {
+            "description" : " Looks like the cave goes east. Trails lead north, west, and south.",
+            "go" : {
+                "e" : "@B14",
+                "n" : "@B17",
+                "s" : "@B10",
+                "w" : "@B16" 
+            } 
+        },
+        "B16" : {
+            "description" : "You are in a clearing. There is a blue gate to the north that appears to be locked. Trails lead east and south.",
+            "go" : {
+                "e" : "@B15",
+                "s" : "@B12" 
+            },
+            "use" : {
+                "#blue key" : "^B16.unlocked" 
+            },
+            "look" : {
+                "blue gate" : "A blue key might work." 
+            } 
+        },
+        "B16.unlocked" : {
+            "description" : "You are in a clearing. There is an unlocked blue gate to the north. Trails lead east and south.",
+            "go" : {
+                "n" : "@B18",
+                "e" : "@B15",
+                "s" : "@B12" 
+            } 
+        },
+        "B17" : {
+            "description" : "You are in a clearing. There is a green gate to the west that appears to be locked. A trail leads south.",
+            "go" : {
+                "s" : "@B15" 
+            },
+            "look" : {
+                "green gate" : "A green key might work." 
+            },
+            "use" : {
+                "#green key" : "^B17.unlocked" 
+            } 
+        },
+        "B17.unlocked" : {
+            "description" : "You are in a clearing. There is an unlocked green gate to the west. A trail leads south.",
+            "go" : {
+                "w" : "@B18",
+                "s" : "@B15" 
+            } 
+        },
+        "B18" : {
+            "description" : "You found the purple house! You win!" 
+        } 
+    } 
+} 
