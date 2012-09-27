@@ -4,8 +4,7 @@
 session_start();
 
 $adventure = true;
-$user_registry = array ( "steve" => "John316",
-			 "brianna" => "John112" );
+$user_registry = array ( "username" => "password");
 
 
 // User must login.
